@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+
+
+  <div class="row mt-4" >
+    <div class="col">
+      <b><h1 style="padding-left: 20%;">WELLCOME To Attendance System...</h1></b>
+
+      <br>
+      <br>
+      <br>
+      <b>Register as Teacher<h1><a href="/register"><button type="button" class="btn btn-danger">Register!</button></a></h1></b>
+      <br>
+      <b>Teacher Login</b><br><br>
+      <a href="/login"><button type="button" class="btn btn-warning">Login</button>
+      <br><br><br></a>
+
+
+      <b>Submit Attendance(Student Section)<h1>
+
+      <a href="/studentPage"><button type="button" class="btn btn-primary">Go to Submission Page</button></a></h1></b><br>
+
+      <div>
+    {% for message in messages %}
+    <h3>{{message}}</h3>
+    {% endfor %}
+ </div>
+      
+    </div>
+  </div>
+</div>
+
+{% endblock %}
